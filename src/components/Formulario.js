@@ -1,6 +1,9 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
+import {getDiferenciaAños} from "../helper";
+import {calcularMarca} from "../helper";
+import {getPlan} from "../helper";
 
 const Campo = styled.div`
   display: flex;
@@ -50,7 +53,7 @@ const Error = styled.div`
   margin-bottom: 2rem;
 `;
 
-function Formulario(props) {
+function Formulario({setResumen}) {
     const [datos, setDatos] = useState({
         marca:'',
         year:'',
@@ -77,8 +80,20 @@ function Formulario(props) {
 
         setError(false)
 
+        const diferencia = getDiferenciaAños(year)
 
+        let resultado = 2000
 
+        resultado -= ((diferencia * 3) *resultado) / 100;
+        resultado = calcularMarca(marca) * resultado;
+        const incrementoPlan = getPlan(plan);
+        resultado = parseFloat(incrementoPlan * resultado).toFixed(2);
+        console.log(resultado)
+
+        setResumen({
+            cotizacion: resultado,
+            datos
+        })
 
     }
 
@@ -108,6 +123,8 @@ function Formulario(props) {
                     onChange={getData}
                 >
                     <option value="">-- Seleccione --</option>
+                    <option value="2023">2023</option>
+                    <option value="2022">2022</option>
                     <option value="2021">2021</option>
                     <option value="2020">2020</option>
                     <option value="2019">2019</option>
