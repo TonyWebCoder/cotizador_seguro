@@ -94,7 +94,7 @@ const Formulario = ({setResumen, setCargando}) => {
         setTimeout(() => {
             setCargando(false)
             setResumen({
-                cotizacion: resultado,
+                cotizacion: Number(resultado),
                 datos
             })
         },3000)
@@ -164,6 +164,7 @@ const Formulario = ({setResumen, setCargando}) => {
     );
 }
 Formulario.propTypes = {
-
+    setResumen: PropTypes.func.isRequired,
+    setCargando: PropTypes.func.isRequired
 };
 export default Formulario;

@@ -4,7 +4,7 @@ import Formulario from "./components/Formulario";
 import Resumen from "./components/Resumen";
 import Resultado from "./components/Resultado";
 import Spinner from "./components/Spinner.js";
-
+import PropTypes from "prop-types";
 import styled from '@emotion/styled';
 
 
@@ -58,6 +58,10 @@ const App = () => {
             </ContenedorFormulario>
       </Contenedor>
   );
+}
+
+App.prototype = {
+    cotizacion: PropTypes.number.isRequired
 }
 
 export default App;
