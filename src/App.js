@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import Formulario from "./components/Formulario";
 import Resumen from "./components/Resumen";
 import Resultado from "./components/Resultado";
+import Spinner from "./components/Spinner.js";
 
 import styled from '@emotion/styled';
 
@@ -26,6 +27,9 @@ const App = () => {
             plan:''
     }
     });
+
+    const [cargando, setCargando] = useState(false);
+
     const {cotizacion, datos} = resumen;
 
     return (
@@ -37,13 +41,20 @@ const App = () => {
             <ContenedorFormulario>
                 <Formulario
                     setResumen = {setResumen}
+                    setCargando = {setCargando}
                 />
+                {cargando ? <Spinner />: null}
+
                 <Resumen
                     datos = {datos}
                 />
-                <Resultado
-                    cotizacion={cotizacion}
-                />
+                {!cargando ?
+                    <Resultado
+                        cotizacion={cotizacion}
+                    />
+                    : null
+                }
+
             </ContenedorFormulario>
       </Contenedor>
   );

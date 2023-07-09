@@ -31,20 +31,22 @@ const Resultado = ({cotizacion}) => {
 
     return (
         (cotizacion === 0) ? <Mensaje>Elige marca, año y tipo de seguro</Mensaje>
-                            : (<ResultadoCotizacion>
-                                <TransitionGroup
-                                    component="p"
-                                    className="resultado"
-                                >
-                                    <CSSTransition
-                                        className="resultado"
-                                        key{cotizacion}
-                                        timeout = {{ enter : 500, exit: 500}}
-                                    >
-                                        <TextoCotizacion>El total es: ${cotizacion}</TextoCotizacion>
-                                    </CSSTransition>
-                                </TransitionGroup>
-                              </ResultadoCotizacion>)
+        : (
+            <ResultadoCotizacion>
+                <TransitionGroup
+                    component="p"
+                    className="resultado"
+                >
+                    <CSSTransition
+                        className="resultado"
+                        key= {cotizacion}
+                        timeout = {{ enter : 300, exit: 150}}
+                    >
+                        <TextoCotizacion>El total es: ${cotizacion}</TextoCotizacion>
+                    </CSSTransition>
+                </TransitionGroup>
+            </ResultadoCotizacion>
+        )
     )
 }
 
