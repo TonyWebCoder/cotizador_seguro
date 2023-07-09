@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Header from "./components/Header";
 import Formulario from "./components/Formulario";
 import Resumen from "./components/Resumen";
+import Resultado from "./components/Resultado";
 
 import styled from '@emotion/styled';
 
@@ -16,9 +17,16 @@ const ContenedorFormulario = styled.div `
   background-color: #FFF;
   padding: 3rem;
 `;
-function App() {
-    const [resumen, setResumen] = useState({});
-    const {datos} = resumen;
+const App = () => {
+    const [resumen, setResumen] = useState({
+        cotizacion: 0,
+        datos: {
+            marca: '',
+            year:'',
+            plan:''
+    }
+    });
+    const {cotizacion, datos} = resumen;
 
     return (
       <Contenedor>
@@ -30,8 +38,12 @@ function App() {
                 <Formulario
                     setResumen = {setResumen}
                 />
-                {datos ? (<Resumen />) : null}
-
+                <Resumen
+                    datos = {datos}
+                />
+                <Resultado
+                    cotizacion={cotizacion}
+                />
             </ContenedorFormulario>
       </Contenedor>
   );

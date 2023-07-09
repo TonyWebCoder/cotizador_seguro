@@ -14,9 +14,13 @@
   <component name="ChangeListManager">
     <list default="true" id="56895c41-1d21-405b-a9ae-1d738ec53e4b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Formulario.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Formulario.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Resultado.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Resultado.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Resumen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Resumen.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +88,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1688873147232</updated>
-      <workItem from="1688873148430" duration="9704000" />
+      <workItem from="1688873148430" duration="12022000" />
     </task>
     <servers />
   </component>

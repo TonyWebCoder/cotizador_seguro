@@ -10,7 +10,13 @@ const ContenedorResumen = styled.div `
   color: #FFF;
   margin-top: 1rem;
 `;
-function Resumen(props) {
+const Resumen = ({datos}) => {
+
+    const {marca, year, plan} = datos;
+
+    if(marca === '' || year === ''|| plan === '') return null;
+
+
     return (
         <ContenedorResumen>
             <h2>Resumen de Cotización</h2>

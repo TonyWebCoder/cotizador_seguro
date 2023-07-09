@@ -53,7 +53,7 @@ const Error = styled.div`
   margin-bottom: 2rem;
 `;
 
-function Formulario({setResumen}) {
+const Formulario = ({setResumen}) => {
     const [datos, setDatos] = useState({
         marca:'',
         year:'',
