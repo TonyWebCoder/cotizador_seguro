@@ -8,8 +8,10 @@ export function calcularMarca(marca) {
     switch (marca) {
         case 'europeo':
             incremeto = 1.30;
+            break
         case 'americano':
             incremeto = 1.15;
+            break
         case 'asiatico':
             incremeto = 1.05;
             break
